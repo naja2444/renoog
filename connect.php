@@ -1,8 +1,8 @@
 <?php
-$db_host = 'localhost';
-$db_user = 'root';
-$db_password = 'root';
-$db_db = 'utilisateurs';
+$db_host = 'mariadb';
+$db_user = 'mathieu';
+$db_password = 'mathieu';
+$db_db = 'casino';
 
 try {
     // Connexion à la base de données avec PDO
