@@ -2,6 +2,8 @@ services:
   monapache:
     # image perso du binôme
     image: mathieuballin/monapache
+    volumes:
+      - .:/var/www/html
     ports:
       - 80:80
 
@@ -13,6 +15,8 @@ services:
       - MYSQL_DATABASE=casino
       - MYSQL_USER=mathieu
       - MYSQL_PASSWORD=mathieu
+    volumes:
+      - .:/db_data:/var/lib/mysql
 
   phpmyadmin:
     # image officielle phpmyadmin
