@@ -1,0 +1,8 @@
+FROM ubuntu
+
+RUN apt update && \
+    apt upgrade -y && \
+    apt install -y vim nano curl wget links telnet dnsutils net-tools mysql-client
+
+CMD ["tail","-f","/dev/null"]
+
