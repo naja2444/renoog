@@ -1,0 +1,27 @@
+services:
+  monapache:
+    # image perso du binôme
+    image: mathieuballin/monapache
+    ports:
+      - 80:80
+
+  mariadb:
+    # image officielle mariadb
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=R00tPassw0rd2025!
+      - MYSQL_DATABASE=casino
+      - MYSQL_USER=mathieu
+      - MYSQL_PASSWORD=mathieu
+
+  phpmyadmin:
+    # image officielle phpmyadmin
+    image: phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+      - PMA_HOST=mariadb
+  
+  monubuntu:
+    # image perso du binôme
+    image: mathieuballin/monubuntu
