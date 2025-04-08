@@ -16,7 +16,7 @@ services:
       - MYSQL_USER=mathieu
       - MYSQL_PASSWORD=mathieu
     volumes:
-      - .:/db_data:/var/lib/mysql
+      - ./db_data:/var/lib/mysql
 
   phpmyadmin:
     # image officielle phpmyadmin
