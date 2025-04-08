@@ -11,7 +11,7 @@ services:
     # image officielle mariadb
     image: mariadb
     environment:
-      - MYSQL_ROOT_PASSWORD=R00tPassw0rd2025!
+      - MYSQL_ROOT_PASSWORD=mathieu
       - MYSQL_DATABASE=casino
       - MYSQL_USER=mathieu
       - MYSQL_PASSWORD=mathieu
