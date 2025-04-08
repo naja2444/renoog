@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!empty($pseudo)) {
         try {
-            $stmt = $pdo->prepare("INSERT INTO casino (pseudo, balance) VALUES (:pseudo, :balance)");
+            $stmt = $pdo->prepare("INSERT INTO $db_db (pseudo, balance) VALUES (:pseudo, :balance)");
             $balance = 0; 
             $stmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
             $stmt->bindParam(':balance', $balance, PDO::PARAM_INT);
